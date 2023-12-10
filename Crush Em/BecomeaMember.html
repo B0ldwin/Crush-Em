@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Membership</title>
+  <link rel="stylesheet" href="BecomeaMember.css">
+  <script src="BecomeaMember.js" defer></script>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="membership" class="membership-section">
+    <h2>Membership Plans</h2>
+    <div class="membership-plans">
+      <div class="plan">
+        <h3>Basic Plan</h3>
+        <p>Access to gym equipment</p>
+        <p>$30/month</p>
+        <button onclick="purchaseMembership('Basic Plan')">Purchase</button>
+      </div>
+      <div class="plan">
+        <h3>Premium Plan</h3>
+        <p>Access to gym equipment + Personal trainer</p>
+        <p>$50/month</p>
+        <button onclick="purchaseMembership('Premium Plan')">Purchase</button>
+      </div>
+      <!-- Add more membership plans as needed -->
+    </div>
+    <div class="purchase-details">
+      <h3>Purchase Details</h3>
+      <p id="purchase-info"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2023 Gym Website. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

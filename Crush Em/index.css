@@ -1,0 +1,97 @@
+
+
+
+
+body{
+	font-family: 'Teko', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("creative7.jpg");
+	background-repeat: repeat;
+}
+.left{
+	display: inline-block;
+	/* border: 2px black; */
+	position: absolute;
+	left: 54px;
+	top: 20px;
+}
+.left img{
+	width:140px;
+	filter: invert(100%);
+}
+.left div{
+	line-height: 20px;
+	font-size:  24px;
+	text-align: center;
+}
+.mid{
+	display: block;
+	width: 37%;
+	margin: 29px auto;
+	/*border: 2px black;*/
+}
+.right{
+	position: absolute;
+	right: 34px;
+	top: 43px;
+	display: inline-block;
+	/*border: 2px black;*/
+}
+.navbar{
+	display: inline-block;
+}
+	
+.navbar li{
+	color: white;
+	display: inline-block;
+	font-size: 25px;
+}
+.navbar li a{
+	color: white;
+	text-decoration: none;
+	padding: 18px 18px;
+}
+.navbar li a:hover, .navbar li a.active{
+	text-decoration: underline;
+	color: grey;
+}
+.button{
+		font-family: 'Teko', sans-serif;
+		margin: 0px 9px;
+		background-color: black;
+		color: white;
+		padding: 4px 14px;
+		border: 2px solid grey;
+		border-radius: 10px;
+		font-size: 20px;
+		cursor: pointer;
+}
+.button:hover{
+		background-color: rgb(0, 0, 0);
+}
+.container{
+	border: 2px white;
+	margin: 150px 450px;
+	padding: 75px;
+	width: 30%;
+	border-radius: 25px;
+}
+.form-group input{
+	font-family: 'Teko', sans-serif;
+	text-align: center;
+	display: block;
+	width:500px;
+	padding: 1px;
+	border: 2px solid black;
+	margin: 11px auto;
+	font-size: 25px;
+}
+.container h1{
+	text-align: center;
+}
+.container button{
+	display: block;
+	width: 142%;
+	margin: 20px auto;
+}

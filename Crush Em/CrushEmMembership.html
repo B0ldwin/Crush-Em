@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Teko:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CrushEmMembership.css">
+
+<body>
+	<header class="header">
+		<!-- Left box for logo -->
+		<div class="left">
+			<img src="kickbox.jpg" alt="">
+		</div>
+		<!-- Mid box for navbar -->
+		<div class="mid">
+			<ul class="navbar">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="CrossFit.html">CrossFit</a></li>
+				<li><a href="CrushEmMembership.html">Become a Member</a></li>
+				<li><a href="AboutUs.html">About Us</a></li>
+				<li><a href="#"class="active">Contact Us</a></li>
+			</ul>
+	</header>
+	<script>
+	function doClear()
+	{
+		document.PizzaForm.customer.value = "";
+		document.PizzaForm.address.value = "";
+		document.PizzaForm.city.value = "";
+		document.PizzaForm.state.value = "";
+		document.PizzaForm.zip.value = "";
+		document.PizzaForm.phone.value = "";
+		return;
+	}
+	function doSubmit()
+	{
+		if (validateText() == false)
+		{
+			alert("Required data missing in Step 1");
+			return;
+		}
+		if (validateRadio() == false)
+		{
+			alert("Required data missing in Step 2");
+			return;
+		}
+		alert("Your pizza order has been submitted.");
+		return;
+	}
+	function validateText()
+	{
+		var customer = document.PizzaForm.customer.value;
+		if (customer.length == 0) return false;
+		var address = document.PizzaForm.address.value;
+		if (address.length == 0) return false;
+		var city = document.PizzaForm.city.value;
+		if (city.length == 0) return false;
+		var phone = document.PizzaForm.phone.value;
+		if (phone.length == 0) return false;
+		return true;
+	}
+	
+
+	</script>
+
+<body>
+	<form name="PizzaForm">
+    <h2>Membership Registration</h2>
+    <div>
+        <h3>Contact Information:</h3>
+        <label for="customer">Name:</label>
+        <input name="customer" id="customer" size="50" type="text"><br>
+		<label for="customer">Address:</label>
+        <input name="customer" id="customer" size="50" type="text"><br>
+		<label for="customer">City:</label>
+        <input name="customer" id="customer" size="50" type="text"><br>
+		<label for="customer">State:</label>
+        <input name="customer" id="customer" size="50" type="text"><br>
+		<label for="customer">Email Address:</label>
+        <input name="customer" id="customer" size="50" type="text"><br>
+		<label for="customer">Phone Number:</label>
+        <input name="customer" id="customer" size="50" type="text"><br>
+    </div>
+
+    <section id="paySection">
+      <h1>Payment Form</h1>
+      
+
+      <form id="payment" name="payment" method="post" action="paysubmit.html">         
+         <fieldset id="creditcard">
+            <legend>Credit Information</legend>
+
+            <label for="cardName">Name*</label>
+            <input name="cardName" id="cardName" required type="text" />              
+
+            <label>Credit Card*</label>
+            <fieldset id="cards">
+               <label class="cardLabel">
+                  <input name="credit" value="amex" type="radio" required />               
+                  <span>American Express</span>
+               </label>
+               <label class="cardLabel">               
+                  <input name="credit" value="discover" type="radio" />
+                  <span>Discover</span>
+               </label>
+               <label class="cardLabel">                              
+                  <input name="credit" value="master" type="radio"  />
+                  <span>MasterCard</span>
+               </label>
+               <label class="cardLabel">                                    
+                  <input name="credit" value="visa" type="radio"  />
+                  <span>Visa</span>
+				  <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrxL1mGKYjlSQfsU5k1_oHK-EGmVDqVnxQnceRptbZGw&s">
+				  				  				
+               </label>
+            </fieldset>          
+
+            <label for="cardNumber">Credit Card Number*</label>
+            <input name="cardNumber" id="cardNumber" required type="text"
+                   pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"/>
+
+            <label for="expMonth">Expiration Date*</label>
+            <select id="expMonth" name="expMonth">
+               <option value="mm">mm</option>
+               <option value="01">01</option>
+               <option value="02">02</option>
+               <option value="03">03</option>
+               <option value="04">04</option>
+               <option value="05">05</option>
+               <option value="06">06</option>
+               <option value="07">07</option>
+               <option value="08">08</option>
+               <option value="09">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+            </select>
+            <span id="separator"> / </span>
+            <select id="expYear" name="expYear">
+               <option value="yy">yy</option>
+               <option value="2022">2022</option>
+               <option value="2023">2023</option>
+               <option value="2024">2024</option>
+               <option value="2025">2025</option>
+               <option value="2026">2026</option>
+            </select>            
+
+            <label for="cvc">CVC*</label>
+            <input name="cvc" id="cvc" required pattern="^\d{3,4}$" type="text"/>
+         </fieldset>
+
+         <p id="footnote">* - Required Item</p>        
+         <input type="submit" id="subButton" value="Submit Payment" />         
+      </form>
+
+   </section>
+
+			<!-- <font face="Times New Roman">
+				Name: &nbsp;&nbsp;&nbsp;<input name="customer" size="50"
+				type="text"><br>
+				Address: <input name="address" size="50" type="text"><br>
+				City: &nbsp;&nbsp;&nbsp;<input name="city" size="15" type="text">
+				State: <input name="state" size="2" type="TEXT">
+				Zip: <input name="zip" size="5" type="text"><br>
+				Phone: &nbsp;&nbsp;&nbsp;<input name="phone" size="50" type="text"><br>
+			</font> -->
+</body>
+
+<main>
+  <section id="membership" class="membership-section">
+    <h2>Membership Packages</h2>
+    <div class="membership-plans">
+      <div class="plan">
+        <h3>Basic Membership</h3>
+        <p>Access to gym equipment</p>
+        <p>$30/month</p>
+        <button onclick="purchaseMembership('Basic Membership')">Purchase</button>
+      </div>
+      <div class="plan">
+        <h3>Pro Membership</h3>
+        <p>Access to gym equipment + Personal trainer</p>
+        <p>$50/month</p>
+        <button onclick="purchaseMembership('Pro Membership')">Purchase</button>
+      </div>
+	  <div class="plan">
+        <h3>Hardcore Membership</h3>
+        <p>Access to gym equipment + Personal trainer</p>
+        <p>$80/month</p>
+        <button onclick="purchaseMembership('Hardcore Membership')">Purchase</button>
+      </div>
+    </div>
+    <div class="purchase-details">
+      <h3>Purchase Details</h3>
+      <p id="purchase-info"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2023 Gym Website. All rights reserved.</p>
+</footer>
+
+<script src="BecomeaMember.js"></script>
+
+
+<script>
+ let button = document.getElementById("button");
+
+// Validate the payment when the submit button is clicked //
+button.addEventListener("click", validateName);
+button.addEventListener("click", validateMonth);
+button.addEventListener("click", validateYear);
+
+// Check if the owner's name is entered on the cardfunction
+validateName() {
+	let cardName = document.getElementById("cardName");
+	if (cardName.validity.valueMissing) {
+		cardName.setCustomValidity("Enter your name as it appears on the card");
+	} else {
+		cardName.setCustomValidity("");
+	}
+}
+
+// Check if a credit card has been selected
+function validateCard() {
+	let card = document.forms.payment.elements.credit[0];
+	if (card.validity.valueMissing) {
+		card.setCustomValidity("Select your credit card");
+	} else {
+		card.setCustomValidity("");
+	}
+}
+
+// Check if the card number is valid
+function validateNumber() {
+	let cNum = document.getElementById("cardNumber");
+	if (cNum.validity.valueMissing) {
+		cNum.setCustomValidity("Enter your card number");
+	} else if (cNum.validity.patternMismatch) {
+		cNum.setCustomValidity("Enter a valid card number"");
+	} else if (luhn(cNum.value) === false) {
+		cNum.setCustomValidity("Enter a legitimate card number");
+	} else {
+		cNum.setCustomValidity("");
+	}
+}
+
+// Check that a month is selected for the expiration date
+function validateMonth() {
+	let month = document.getElementById("expMonth");
+	if (month.selectedIndex === 0) {
+		month.setCustomValidity("Select the expiration month");
+	} else {
+		month.setCustomValidity("");
+	}
+}
+
+// Check that a year is selected for the expiration date
+function validateYear() {
+	let year = document.getElementById("expYear");
+	if (year.selectedIndex === 0) {
+		year.setCustomValidity("Select the expiration year");
+	} else {
+		year.setCustomValidity("");
+	}
+}
+
+function validateCVC() {
+	// Determine which card was selected
+	let card = document.querySelector('input[name="credit"]:checked').value;
+	let cvc = document.getElementById("cvc");
+	
+	// Validate the CVC value
+	if (cvc.validity.valueMissing) {
+		cvc.setCustomValidity("Enter your CVC number");
+	} else if ((card === "amex") && !(/^\d{4}$/.test(cvc.value))) {
+		cvc.setCustomValidity("Enter a 4-digit number");
+	} else if ((card !== "amex") && !(/^\d{3}$/.test(cvc.value))) {
+		cvc.setCustomValidity("Enter a 3-digit number");
+	} else {
+		cvc.setCustomValidity("");
+	}
+}
+
+
+function luhn(idNum) {
+   let string1 = "";
+   let string2 = "";
+   
+   // Retrieve the odd-numbered digits starting from the back
+   for (let i = idNum.length - 1; i >= 0; i-= 2) {
+      string1 += idNum.charAt(i);
+   }
+   // Retrieve the even-numbered digits starting from the back and double them
+   for (let i = idNum.length - 2; i >= 0; i-= 2) {
+      string2 += 2*idNum.charAt(i);
+   }
+   
+   // Return whether the sum of the digits is divisible by 10
+   return sumDigits(string1 + string2) % 10 === 0;
+   
+   function sumDigits(numStr) {
+      let digitTotal = 0;
+      for (let i = 0; i < numStr.length; i++) {
+         digitTotal += parseInt(numStr.charAt(i));
+      }
+      return digitTotal;
+   }
+}
+ </script>  
+</body>
+</html>
+
+</html>

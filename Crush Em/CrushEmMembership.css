@@ -1,0 +1,195 @@
+body{
+	font-family: 'Teko', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	min-height: 100%;
+	background-color: rgb(0, 0, 0);
+	background-image: url("act2.jpg");
+	background-size: 100%;
+	background-repeat: repeat;
+	background-position: center center;
+}
+.text-container {
+      width: 70%; /* Adjust width as needed */
+      margin: 20px auto; /* Center the container */
+      text-align: left; /* Align text to the left */
+      padding: 20px;
+      box-sizing: border-box; /* Include padding in width calculation */
+      background-color: #f0f0f0; /* Example background color */
+}
+.left{
+	display: inline-block;
+	/* border: 2px black; */
+	position: absolute;
+	left: 54px;
+	top: 20px;
+}
+.left img{
+	width:140px;
+	filter: invert(100%);
+}
+.left div{
+	line-height: 20px;
+	font-size:  24px;
+	text-align: center;
+}
+.mid{
+	display: block;
+	width: 37%;
+	margin: 29px auto;
+	/*border: 2px black;*/
+}
+.right{
+	position: absolute;
+	right: 34px;
+	top: 43px;
+	display: inline-block;
+	/*border: 2px black;*/
+}
+.navbar{
+	display: inline-block;
+}
+	
+.navbar li{
+	color: white;
+	display: inline-block;
+	font-size: 25px;
+}
+.navbar li a{
+	color: white;
+	text-decoration: none;
+	padding: 18px 18px;
+}
+.navbar li a:hover, .navbar li a.active{
+	text-decoration: underline;
+	color: grey;
+}
+.button{
+		font-family: 'Teko', sans-serif;
+		margin: 0px 9px;
+		background-color: black;
+		color: white;
+		padding: 4px 14px;
+		border: 2px solid grey;
+		border-radius: 10px;
+		font-size: 20px;
+		cursor: pointer;
+}
+.button:hover{
+		background-color: rgb(0, 0, 0);
+}
+.container{
+	border: 2px white;
+	margin: 106px 80px;
+	padding: 75px;
+	width: 30%;
+	border-radius: 25px;
+}
+.form-group input{
+	font-family: 'Teko', sans-serif;
+	text-align: center;
+	display: block;
+	width:500px;
+	padding: 1px;
+	border: 2px solid black;
+	margin: 11px auto;
+	font-size: 25px;
+}
+.container h1{
+	text-align: center;
+}
+.container button{
+	display: block;
+	width: 74%;
+	margin: 20px auto;
+}
+
+/* 
+    .slideshow-container {
+      max-width: 800px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+      border: 1px black;
+      margin-bottom: 20px;
+    }
+
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: auto;
+    }  */
+.membership-section {
+  padding: 20px;
+}
+
+.membership-plans {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.plan {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px;
+  margin: 10px;
+}
+
+.plan button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.purchase-details {
+  margin-top: 30px;
+}
+
+.purchase-details h3 {
+  margin-bottom: 10px;
+}
+   /* Payment Form Styles */
+
+section#paySection {
+   -webkit-flex: 1 1 550px;
+   flex: 1 1 550px;
+   border-left: 4px double rgb(101, 101, 101);   
+   min-height: 300px;
+   font-size: 14px;
+}
+
+section#paySection p#footnote {
+   font-size: 1em;
+   text-align: left;
+   margin: 0px 10px 20px 140px;
+}
+
+section#paySection h1 {
+   text-align: center;
+   font-size: 2em;
+   letter-spacing: 0.15em;
+   margin: 20px 0px;
+   font-weight: normal;
+   color: rgb(57, 44, 28);
+}
+
+form#payment fieldset {
+   border: none;
+}
+
+
+
+form#payment legend {
+   font-size: 1.3em;
+   padding: 8px;
+   width: 80%;
+   text-align: left;
+   margin-left: 50px;
+   margin-bottom: 20px;
+   color: rgb(57, 44, 28);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Crush 'Em</title>
+	
+
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Teko:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+<script src="Crush Em.js" defer></script>
+<script src="CE.js" defer></script>
+<body>
+	<header class="header">
+		<!-- Left box for logo -->
+		<div class="left">
+			<img src="kickbox.jpg" alt="">
+		</div>
+		<!-- Mid box for navbar -->
+		<div class="mid">
+			<ul class="navbar">
+				<li><a href="#"class="active">Home</a></li>
+				<li><a href="CrossFit.html">CrossFit</a></li>
+				<li><a href="CrushEmMembership.html">Become a Member</a></li>
+				<li><a href="AboutUs.html">About Us</a></li>
+				<li><a href="ContactUs.html">Contact Us</a></li>
+			</ul>
+	</header>
+	<body>
+   </header>
+  
+<script>
+  let slideIndex = 0;
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  showSlides();
+</script>
+
+</body>
+</html>
